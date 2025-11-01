@@ -1,0 +1,10 @@
+langchain-community
+langchain-groq
+langchain-core
+langchain-text-splitters
+langchain-huggingface
+chromadb
+python-dotenv
+tqdm
+sentence-transformers
+streamlit==1.31.0
