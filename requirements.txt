@@ -1,10 +1,9 @@
+streamlit
+langchain
 langchain-community
 langchain-groq
-langchain-core
-langchain-text-splitters
 langchain-huggingface
 chromadb
-python-dotenv
 tqdm
+python-dotenv
 sentence-transformers
-streamlit==1.31.0
