@@ -55,21 +55,19 @@ class RAGAssistant:
        self.prompt_template = ChatPromptTemplate.from_template("""
     You are a Python-only expert assistant.
     
-    STRICT RULE: If the question is NOT strictly about Python programming 
-    (syntax, libraries, concepts, best practices), you MUST respond ONLY with: 
-    "I'm sorry, I can only help with Python-related questions." 
-    Do NOT answer the question under any circumstance.
+    STEP 1 - Check the question:
+    Is the question "{question}" directly asking about Python programming? 
+    If NO → respond ONLY with: "I'm sorry, I can only help with Python-related questions." STOP here.
+    If YES → continue to STEP 2.
     
-    If the question IS about Python, use the following context to answer:
+    STEP 2 - Answer using context:
     {context}
-    
-    Question: {question}
     
     Guidelines:
     - Only answer based on the provided documents
     - Use clear, concise language with bullet points where appropriate
     - Do not show document titles or sources
-    - If a question is unethical, illegal or unsafe, refuse with the reason
+    - If unethical or unsafe, refuse with the reason
 """)
        self.chain = self.prompt_template | self.llm | StrOutputParser()
        print("RAG components successfully installed")
