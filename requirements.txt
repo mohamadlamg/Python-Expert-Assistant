@@ -4,8 +4,9 @@ langchain-community
 langchain-groq
 langchain-huggingface
 langchain-text-splitters
-chromadb
 tqdm
 python-dotenv
 sentence-transformers
 torchvision
+chromadb==0.4.24
+protobuf==3.20.3
