@@ -3,8 +3,9 @@ langchain
 langchain-community
 langchain-groq
 langchain-huggingface
+langchain-text-splitters
 chromadb
 tqdm
 python-dotenv
 sentence-transformers
-langchain-text-splitters
+torchvision
